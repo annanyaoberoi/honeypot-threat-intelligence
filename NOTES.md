@@ -1,6 +1,6 @@
 # Honeypot Threat Intelligence Project — Notes
 
-## Day 1 — 06 September 2026
+## Day 1
 
 ### Environment
 - OS: Kali Linux
@@ -48,3 +48,13 @@ Build a honeypot-based threat intelligence system that:
 - Learn Docker fundamentals
 - Understand Cowrie
 - Deploy Cowrie in an isolated container
+
+## Day 2
+
+* Learned: honeypot = fake vulnerable system to safely study attacker behavior
+* Low-interaction vs high-interaction honeypots — Cowrie is a low-interaction honeypot that emulates SSH/Telnet and does not provide attackers with a real underlying shell
+* Practiced Docker: ran an Ubuntu container interactively using `docker run -it ubuntu bash`
+* Practiced checking Docker containers and images using `docker ps -a` and `docker images`
+* Pulled the `cowrie/cowrie` Docker image successfully (278MB)
+* Key learning: image = blueprint/template, container = running instance of that image
+* Next: configure and launch Cowrie — first verify that port 22 is free so there is no conflict with a real SSH service
