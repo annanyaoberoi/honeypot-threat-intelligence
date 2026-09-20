@@ -34,6 +34,14 @@
 Docker allows applications to run inside isolated containers.
 This will be used later to run the Cowrie SSH honeypot.
 
+### Environment Decision
+- Running honeypot on local VirtualBox VM (NAT network) instead of cloud VM
+- Trade-off: won't receive organic internet attacker traffic
+- Mitigation: will generate controlled/simulated attack traffic using scripts
+  (brute force attempts, common credential lists, basic recon commands)
+  to build a realistic dataset for analysis and model training
+- This mirrors how red-team/adversarial simulation exercises work in real SOCs
+
 ### Project Goal
 Build a honeypot-based threat intelligence system that:
 1. Collects attacker activity
